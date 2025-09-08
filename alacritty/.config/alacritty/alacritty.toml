@@ -1,20 +1,21 @@
 [general]
 live_config_reload = true
+import = ["~/.config/alacritty/themes/ondark.toml",]
 
 [env]
 TERM = "xterm-256color"
 
 [colors.primary]
-background = "#1c1c1c"
+background = "#262626"
 foreground = "#ffffff"
 
 [colors.cursor]
-text = "#000000" 
-cursor = "#ffd75f"
+text = "#ffffff" 
+cursor = "#6489ee"
 
 [window]
-padding.x = 0
-padding.y = 0
+padding.x = 3
+padding.y = 3
 # opacity = 0.85
 # blur = true
 # decorations = "None" 
@@ -22,10 +23,10 @@ padding.y = 0
 # [colors]
 # transparent_background_colors = true 
 [font]
-normal = {family = "Hack Nerd Font", style = 'Regular'}
-size = 10.5
+normal = {family = "MesloLGM Nerd Font Propo", style = 'Bold'}
+size = 11
 
 [cursor.style] 
 shape = "Block"
-blinking = "Always"
+blinking = "Never"
 

@@ -103,6 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+#add warning low battery 
+export PATH=$PATH:home/bacchimcho/i3-battery-popup/
+
 alias cls="clear"
 alias dow="aria2c -x 16 -s 16"
 
@@ -116,3 +120,10 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export GTK_USE_PORTAL=1
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+
+export PATH="$PATH:/home/bacchimcho/Downloads/helix-25.07.1-x86_64-linux"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

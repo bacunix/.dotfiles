@@ -7,11 +7,11 @@ return {
             options = {
                 icons_enabled = true,
                 theme = 'auto',
-                component_separators = { left = '|', right = '|'},
-                section_separators = { left = ' ', right = ' '},
+                component_separators = { left = '', right = ''},
+                section_separators = { left = '', right = ''},
                 disabled_filetypes = {
-                statusline = {},
-                winbar = {},
+                    statusline = {},
+                    winbar = {},
                 },
                 ignore_focus = {},
                 always_divide_middle = true,
@@ -41,14 +41,6 @@ return {
                 lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = {'filename'},
                 lualine_x = {'encoding', 'fileformat', 'filetype',
-                    function()
-                        local encoding = vim.o.fileencoding
-                        if encoding == "" then
-                        return vim.bo.fileformat .. " :: " .. vim.bo.filetype
-                        else
-                        return encoding .. " :: " .. vim.bo.fileformat .. " :: " .. vim.bo.filetype
-                        end
-                    end,
                 },
                 lualine_y = {'progress'},
                 lualine_z = {'location'}
@@ -70,3 +62,5 @@ return {
         }
     end
 }
+
+

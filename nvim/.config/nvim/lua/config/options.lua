@@ -15,9 +15,9 @@ vim.opt.smartindent = true         -- Insert indents automatically
 vim.opt.splitbelow = true          -- Put new windows below current
 vim.opt.splitright = true          -- Put new windows right of current
 vim.opt.tabstop = 4               -- Number of spaces tabs count for
-vim.opt.termguicolors = true       -- True color support
+vim.opt.termguicolors = false       -- True color support
 vim.opt.wrap = false               -- Disable line wrap
-vim.opt.guicursor = "a:block"
+-- vim.opt.guicursor = "a:block"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
@@ -25,7 +25,7 @@ vim.opt.laststatus = 2
 vim.g.netrw_banner = 0
 -- vim.opt.showtabline = 4
 -- vim.opt.shell = "nu"
--- vim.opt.guifont="Fira Code Nerd Font:11"
+-- vim.opt.guifont="Hack Nerd Font:11"
 -- Mapping để refresh view
 vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = true})
 
@@ -34,3 +34,4 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = t
 -- vim.opt.updatetime = 100 
 
 -- vim.cmd("set ttyfast")
+
