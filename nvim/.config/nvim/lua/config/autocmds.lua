@@ -7,13 +7,13 @@ vim.api.nvim_create_autocmd("FileType", {
   end
 })
 
-
-vim.api.nvim_create_autocmd("VimEnter", {
-pattern = "*",
-callback = function()
-    if vim.fn.argv(0) == "" then
-    vim.cmd("Ex")
-    end
-end
-})
+-- auto enable Explore when not open file
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- pattern = "*",
+-- callback = function()
+--     if vim.fn.argv(0) == "" then
+--     vim.cmd("Ex")
+--     end
+-- end
+-- })
 

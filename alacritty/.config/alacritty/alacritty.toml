@@ -10,12 +10,13 @@ background = "#262626"
 foreground = "#ffffff"
 
 [colors.cursor]
-text = "#ffffff" 
-cursor = "#6489ee"
+text = "#000000" 
+cursor  = "#aeaeae"
 
+# cursor = "#6489ee"
 [window]
-padding.x = 3
-padding.y = 3
+padding.x = 0
+padding.y = 0
 # opacity = 0.85
 # blur = true
 # decorations = "None" 
@@ -23,8 +24,8 @@ padding.y = 3
 # [colors]
 # transparent_background_colors = true 
 [font]
-normal = {family = "MesloLGM Nerd Font Propo", style = 'Bold'}
-size = 11
+normal = {family = "MesloLGLNerdFontMono", style = 'Regular'}
+size = 8
 
 [cursor.style] 
 shape = "Block"

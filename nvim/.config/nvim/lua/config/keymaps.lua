@@ -207,4 +207,4 @@ vim.api.nvim_create_user_command('Dow', function(opts)
 end, { nargs = 1, desc = 'Download a file with aria2 and optionally extract it in current directory' })
 
 
-vim.keymap.set("n", "<leader>e", ":Ex .<CR>", {silent = true});
+-- vim.keymap.set("n", "<leader>e", ":Ex .<CR>", {silent = true});
