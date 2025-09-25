@@ -41,6 +41,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -55,7 +56,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindcode $mod+40 exec "rofi -show drun -theme $HOME/rofi-collection/dracula/dracula.rasi"
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -187,14 +189,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     position top
-    # mode hide
+    mode hide
     # tray_output primary
     # tray_output HDMI1
     status_command i3status
-    modifier $mod+Shift
+    modifier $mod+Mod1
     colors {
-        focused_workspace #444444 #87d787
-        background #262626
+        focused_workspace #181825 #89b4fa
+        background #285577
+        statusline #ffffff
     }
 }
 
@@ -202,9 +205,15 @@ exec --no-startup-id "xset r rate 200 30"
 
 bindsym --release Shift+Print exec scrot -s -f \~/Pictures/%Y-%m-%d-%H%M%S.png
 
+# bindsym $mod+Shift+s --release exec --no-startup-id scrot -s - | xclip -selection clipboard -t image/png
+
 bindsym --release Ctrl+Shift+Print exec scrot -s -f -o "/tmp/image.png" && xclip -selection clipboard -t image/png -i /tmp/image.png
 
-exec_always --no-startup-id feh --bg-scale /home/bacchimcho/Pictures/dejan-zakic-vnywo8u6d9c-unsplash.jpg
+# exec_always --no-startup-id feh --bg-scale /home/bacchimcho/Wallpapers/kaguya-shinomiya-red-desktop-wallpaper.jpg
+# exec_always --no-startup-id feh --bg-scale /home/bacchimcho/Wallpapers/mikasa.jpg
+
+bindsym $mod+Shift+w exec --no-startup-id feh --randomize --bg-fill /home/bacchimcho/Wallpapers
+
 
 exec --no-startup-id xrdb -merge ~/.Xresources
 
@@ -212,13 +221,13 @@ exec --no-startup-id xrdb -merge ~/.Xresources
 bindsym $mod+shift+f exec thunar
 
 # Toggle between hide state and show state
-bindsym $mod+m bar hidden_state toggle
+# bindsym $mod+m bar hidden_state toggle
 
 # Toggle between dock mode and hide mode
 bindsym $mod+n bar mode toggle
 
 # Set the bar instance with id 'bar-1' to switch to hide mode
-bindsym $mod+b bar mode hide bar-1
+# bindsym $mod+b bar mode hide bar-1
 
 bindsym $mod+t border toggle
 
@@ -227,26 +236,25 @@ bindsym $mod+t border toggle
 # Set the bar instance with id 'bar-1' to always stay hidden
 bindsym $mod+Shift+b bar mode invisible bar-1
 
-bindsym $mod+g exec google-chrome
+bindsym $mod+g exec firefox
 
 #configure space between windows
 gaps inner 5px
 gaps outer 5px
 
 # # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 1
 
-
-#set fcitx5 auto run in startup
+#set fcitx5 run in startup
 exec --no-startup-id fcitx5 -d
 
 exec xinput set-prop "DLL0704:01 06CB:76AE Touchpad" "libinput Tapping Enabled" 1
 # exec --no-startup-id xinput set-prop 11 "libinput Natural Scrolling Enabled" 1
-
 
 #border color 
 # client.focused #6fcee5 #6fcee5 #6fcee5 #578493
 
 for_window [title="Battery Warning"] sticky enable
 
-# exec --no-startup-id compton
+exec --no-startup-id compton
+# exec --no-startup-id picom --config ~/.config/picom.conf -b

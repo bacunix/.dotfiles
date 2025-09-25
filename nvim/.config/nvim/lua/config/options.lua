@@ -5,6 +5,11 @@ vim.opt.cursorline = false          -- Enable highlighting of the current line
 vim.opt.expandtab = true           -- Use spaces instead of tabs
 vim.opt.ignorecase = true          -- Ignore case
 -- vim.opt.list = true                -- Show some invisible characters (tabs...
+-- vim.opt.statuscolumn = "%s %l %r "
+-- vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "white" })
+-- vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ead84e" })
+vim.opt.signcolumn = 'no'
+-- vim.cmd("set cmdheight=0")
 vim.opt.mouse = "a"                -- Enable mouse mode
 vim.opt.number = true              -- Print line number
 vim.opt.relativenumber = true      -- Relative line numbers
@@ -15,7 +20,7 @@ vim.opt.smartindent = true         -- Insert indents automatically
 vim.opt.splitbelow = true          -- Put new windows below current
 vim.opt.splitright = true          -- Put new windows right of current
 vim.opt.tabstop = 4               -- Number of spaces tabs count for
-vim.opt.termguicolors = false       -- True color support
+vim.opt.termguicolors = true       -- True color support
 vim.opt.wrap = false               -- Disable line wrap
 -- vim.opt.guicursor = "a:block"
 vim.opt.swapfile = false
@@ -30,6 +35,8 @@ vim.g.netrw_banner = 0
 vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = true})
 
 -- vim.cmd("set timeoutlen=300")
+vim.cmd("set timeoutlen=500")
+vim.cmd("set updatetime=300")
 -- vim.cmd("set ttimeoutlen=50")
 -- vim.opt.updatetime = 100 
 

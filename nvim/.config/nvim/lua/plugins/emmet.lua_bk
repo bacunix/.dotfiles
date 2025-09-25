@@ -1,6 +1,6 @@
 return {
   "mattn/emmet-vim",
-  lazy = false,
+  lazy = true,
   config = function()
     vim.g.user_emmet_leader_key = '<C-l>'
   end,
