@@ -5,7 +5,7 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [colors.primary]
-background = "#1e1e2e"
+background = "#000000"
 foreground = "#ffffff"
 
 # [colors.cursor]
@@ -14,17 +14,17 @@ foreground = "#ffffff"
 
 # cursor = "#6489ee"
 [window]
-padding.x = 2
-padding.y = 2
-opacity = 0.85
-blur = true
+padding.x = 0
+padding.y = 0
+# opacity = 0.85
+# blur = true
 # decorations = "None" 
 
 # [colors]
 # transparent_background_colors = true 
 [font]
 normal = {family = "MesloLGLNerdFontMono", style = 'Regular'}
-size = 8
+size = 7.5
 
 [cursor.style] 
 shape = "Block"

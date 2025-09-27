@@ -15,6 +15,8 @@ end
 -- reload 
 vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = true})
 
+vim.keymap.set('n', ';', ':')
+
 -- toggle list chars
 vim.keymap.set('n', '<leader>l', function()
   vim.opt.list = not vim.opt.list:get()
