@@ -10,8 +10,8 @@ return {
   lazy = false,
 
     config = function()
-        vim.keymap.set("n", "<leader>_", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-        vim.keymap.set("n", "<leader>e", require("oil").toggle_float)
+        vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+        vim.keymap.set("n", "<leader>_", require("oil").toggle_float)
         require("oil").setup({
             -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
             -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
@@ -20,9 +20,9 @@ return {
             -- See :help oil-columns
             columns = {
                 "icon",
-                -- "permissions",
-                -- "size",
-                -- "mtime",
+                "permissions",
+                "size",
+                "mtime",
             },
             -- Buffer-local options to use for oil buffers
             buf_options = {

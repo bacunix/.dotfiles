@@ -18,9 +18,9 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = t
 vim.keymap.set('n', ';', ':')
 
 -- toggle list chars
-vim.keymap.set('n', '<leader>l', function()
-  vim.opt.list = not vim.opt.list:get()
-end, {desc = "Toggle list chars"})
+-- vim.keymap.set('n', '<leader>l', function()
+--   vim.opt.list = not vim.opt.list:get()
+-- end, {desc = "Toggle list chars"})
 
 
 -- Resize window using <ctrl> arrow keys
@@ -210,3 +210,45 @@ end, { nargs = 1, desc = 'Download a file with aria2 and optionally extract it i
 
 
 -- vim.keymap.set("n", "<leader>e", ":Ex .<CR>", {silent = true});
+
+
+
+-- vim.api.nvim_create_user_command("ShowTree", function()
+-- 	local buf = vim.api.nvim_create_buf(false, true)
+-- 	local editor_width = vim.o.columns
+-- 	local editor_height = vim.o.lines
+-- 	local width = math.floor(editor_width * 0.6)
+-- 	local height = math.floor(editor_height * 0.9)
+--
+-- 	local row = math.floor((editor_height - height) / 2)
+-- 	local col = math.floor((editor_width - width) / 2)
+-- 	local opts = {
+-- 		relative = "editor",
+-- 		width = width,
+-- 		height = height,
+-- 		row = row,
+-- 		col = col,
+-- 		border = "rounded",
+-- 		style = "minimal",
+-- 	}
+--
+-- 	local win = vim.api.nvim_open_win(buf, true, opts)
+-- 	local job_id = vim.fn.jobstart("tree -L 4", {
+-- 		stdout_buffered = true,
+-- 		on_stdout = function(_, data)
+-- 			if data then
+-- 				for _, line in ipairs(data) do
+-- 					vim.api.nvim_buf_set_lines(buf, -1, -1, true, { line })
+-- 				end
+-- 			end
+-- 		end,
+-- 		on_exit = function()
+-- 			-- vim.api.nvim_win_close(win, true)
+-- 		end,
+-- 	})
+-- 	print("Job ID: " .. job_id)
+-- end, {})
+
+vim.keymap.set("n", "<leader>nt", ":!tree<CR>", {silent = true}, { desc = "Show directory tree in floating window" })
+vim.keymap.set("n", "<leader>ll", ":!ls -la<CR>", {silent = true})
+vim.keymap.set("i", "<C-a>", "<ESC>") 
