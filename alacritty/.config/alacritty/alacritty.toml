@@ -8,9 +8,9 @@ TERM = "xterm-256color"
 background = "#000000"
 foreground = "#ffffff"
 
-# [colors.cursor]
-# text = "#000000" 
-# cursor  = "#aeaeae"
+[colors.cursor]
+text = "#000000" 
+cursor  = "#aeaeae"
 
 # cursor = "#6489ee"
 [window]
@@ -23,8 +23,8 @@ padding.y = 0
 # [colors]
 # transparent_background_colors = true 
 [font]
-normal = {family = "MesloLGLNerdFontMono", style = 'Regular'}
-size = 7.5
+normal = {family = "Iosevka", style = 'Regular'}
+size = 9
 
 [cursor.style] 
 shape = "Block"

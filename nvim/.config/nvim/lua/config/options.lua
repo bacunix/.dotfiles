@@ -8,8 +8,8 @@ vim.opt.ignorecase = true          -- Ignore case
 -- vim.opt.statuscolumn = "%s %l %r "
 -- vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "white" })
 -- vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#ead84e" })
-vim.opt.signcolumn = 'no'
-vim.cmd("set cmdheight=0")
+vim.opt.signcolumn = "number"
+-- vim.cmd("set cmdheight=0")
 vim.opt.mouse = "a"                -- Enable mouse mode
 vim.opt.number = true              -- Print line number
 vim.opt.relativenumber = true      -- Relative line numbers
@@ -26,8 +26,11 @@ vim.opt.guicursor = "a:block"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
-vim.opt.laststatus = 2
+vim.opt.laststatus = 0
 vim.g.netrw_banner = 0
+
+--change number column color
+-- vim.api.nvim_set_hl(0, "LineNr", { bg = "#1f1f1f"}) 
 -- vim.opt.showtabline = 4
 -- vim.opt.shell = "nu"
 -- vim.opt.guifont="Hack Nerd Font:11"
