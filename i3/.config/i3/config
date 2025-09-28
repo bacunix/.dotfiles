@@ -207,7 +207,7 @@ bar {
 
 exec --no-startup-id "xset r rate 200 30"
 
-bindsym --release Shift+Print exec scrot -s -f \~/Pictures/%Y-%m-%d-%H%M%S.png
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
 # bindsym $mod+Shift+s --release exec --no-startup-id scrot -s - | xclip -selection clipboard -t image/png
 
