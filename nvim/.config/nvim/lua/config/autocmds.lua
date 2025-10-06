@@ -26,7 +26,6 @@ vim.api.nvim_create_autocmd("ModeChanged", {
       vim.cmd("highlight Visual guibg=#9b8d7f guifg=#181818") -- Example: Dark grey
     else
       -- Revert to default background color for other modes
-      vim.cmd("highlight Normal guibg=NONE") -- Or your default background color
       vim.cmd("highlight Visual guibg=NONE") -- Revert Visual highlight
     end
   end,

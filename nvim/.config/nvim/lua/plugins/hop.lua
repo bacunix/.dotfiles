@@ -5,6 +5,6 @@ return {
     -- you can configure Hop the way you like here; see :h hop-config
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
 
-    vim.keymap.set("n", 'gw', ":HopWord<cr>", {silent = true})
+    vim.keymap.set("n", 'gw', ":HopWord<cr>", {silent = true} , {desc = "easy navigate in neovim"})
   end
 }

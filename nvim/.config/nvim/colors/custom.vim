@@ -9,8 +9,8 @@ endif
 let g:colors_name = 'custom'
 
 " Define highlight groups
-highlight Normal        guifg=#FEFEFE guibg=#202020
-highlight NormalFloat   guifg=#FEFEFE guibg=#202020
+highlight Normal        guifg=#FEFEFE guibg=#282828
+highlight NormalFloat   guifg=#FEFEFE guibg=#282828
 highlight Comment       guifg=#6f7b68
 highlight TSComment       guifg=#6f7b68
 highlight Conceal       guibg=#262626

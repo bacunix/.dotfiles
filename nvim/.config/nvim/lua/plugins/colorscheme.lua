@@ -27,17 +27,18 @@
 --   end,
 -- }
 
--- return {
---     'joshdick/onedark.vim',
---     lazy = false,
---     priority = 1000,
---
---     config = function()
---         vim.cmd("colorscheme onedark")
---         vim.cmd("hi! Normal guibg=NONE ctermbg=NONE")
---         vim.cmd("hi! NonText guibg=NONE ctermbg=NONE")
---     end
--- }
+return {
+    'joshdick/onedark.vim',
+    lazy = false,
+    priority = 1000,
+
+    config = function()
+        vim.cmd("set notermguicolors")
+        vim.cmd("colorscheme onedark")
+        -- vim.cmd("hi! Normal guibg=NONE ctermbg=NONE")
+        -- vim.cmd("hi! NonText guibg=NONE ctermbg=NONE")
+    end
+}
 
 -- return 
 -- { "catppuccin/nvim", name = "catppuccin", priority = 1000,
@@ -103,24 +104,24 @@
 --     end
 -- }
 
-return {
-    "RRethy/base16-nvim",
-    lazy = false,
-
-    config = function()
-        -- To disable highlights for supported plugin(s), call the `with_config` function **before** setting the colorscheme.
-        -- These are the defaults.
-        require('base16-colorscheme').with_config({
-            telescope = true,
-            indentblankline = true,
-            notify = false,
-            ts_rainbow = false,
-            cmp = true,
-            illuminate = true,
-            dapui = true,
-        })
-
-        -- All builtin colorschemes can be accessed with |:colorscheme|.
-        vim.cmd('colorscheme base16-black-metal-gorgoroth')
-    end
-}
+-- return {
+--     "RRethy/base16-nvim",
+--     lazy = false,
+--
+--     config = function()
+--         -- To disable highlights for supported plugin(s), call the `with_config` function **before** setting the colorscheme.
+--         -- These are the defaults.
+--         require('base16-colorscheme').with_config({
+--             telescope = true,
+--             indentblankline = true,
+--             notify = false,
+--             ts_rainbow = false,
+--             cmp = true,
+--             illuminate = true,
+--             dapui = true,
+--         })
+--             -- All builtin colorschemes can be accessed with |:colorscheme|.
+--         vim.cmd('colorscheme base16-black-metal-gorgoroth')
+--         -- vim.cmd("highlight Normal guibg=NONE")
+--     end
+-- }

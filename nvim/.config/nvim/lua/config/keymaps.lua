@@ -22,7 +22,6 @@ vim.keymap.set('n', ';', ':')
 --   vim.opt.list = not vim.opt.list:get()
 -- end, {desc = "Toggle list chars"})
 
-
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
@@ -252,3 +251,4 @@ end, { nargs = 1, desc = 'Download a file with aria2 and optionally extract it i
 vim.keymap.set("n", "<leader>nt", ":!tree<CR>", {silent = true}, { desc = "Show directory tree in floating window" })
 vim.keymap.set("n", "<leader>ll", ":!ls -la<CR>", {silent = true})
 vim.keymap.set("i", "<C-a>", "<ESC>") 
+vim.keymap.set("n", "<leader>v", "V")
